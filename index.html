@@ -8,6 +8,7 @@
     :root {
   --bg: #fffaf8;
   --card: #ffffff;
+  --trendcard: #f2e5e8;
   --text: #2f2623;
   --muted: #8d7b74;
   --accent: #6a3d2e;
@@ -146,6 +147,44 @@
   transform: translateY(-2px);
   text-decoration: none;
 }
+    .trending-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+  gap: 18px;
+}
+
+.trending-card {
+  display: block;
+  background: var(--trendcard);
+  border: 1px solid #ead6da;
+  border-radius: 18px;
+  padding: 20px;
+  text-decoration: none;
+  color: var(--text);
+  box-shadow: 0 6px 16px rgba(0,0,0,0.04);
+  transition: all 0.22s ease;
+}
+
+.trending-card:hover {
+  transform: translateY(-5px);
+  border-color: var(--accent);
+  box-shadow: 0 10px 24px rgba(0,0,0,0.08);
+  text-decoration: none;
+}
+
+.trending-card-title {
+  color: var(--accent);
+  font-weight: 700;
+  font-size: 1.05rem;
+  line-height: 1.4;
+  margin-bottom: 10px;
+}
+
+.trending-card-text {
+  color: var(--muted);
+  font-size: 0.95rem;
+  line-height: 1.55;
+}
 
     footer {
       text-align: center;
@@ -169,31 +208,38 @@
       </p>
     </header>
 
-    <section class="section">
-      <h2>🔥 Trending Picks</h2>
-      <ul>
-        <li>
-          <a href="#">Best Amazon Finds Under $50</a>
-          <div class="description">Budget-friendly gems that feel surprisingly premium.</div>
-        </li>
-        <li>
-          <a href="#">Wardrobe Picks You’ll Actually Wear</a>
-          <div class="description">Fashion finds to elevate your look.</div>
-        </li>
-        <li>
-          <a href="#">Glow Up Essentials</a>
-          <div class="description">Beauty & wellness favorites for daily self-care.</div>
-        </li>
-        <li>
-          <a href="#">Luxe Finds</a>
-          <div class="description">Treat yourself (these make great gift ideas too).</div>
-        </li>
-        <li>
-          <a href="#">Travel Must-Haves Worth Buying</a>
-          <div class="description">Smart companions for adventures near or far.</div>
-        </li>
-      </ul>
-    </section>
+<section class="section">
+  <h2>🔥 Trending Picks</h2>
+
+  <div class="trending-grid">
+
+    <a href="#" class="trending-card">
+      <div class="trending-card-title">Best Amazon Finds Under $50</div>
+      <div class="trending-card-text">Budget-friendly gems that feel surprisingly premium.</div>
+    </a>
+
+    <a href="#" class="trending-card">
+      <div class="trending-card-title">Wardrobe Picks You’ll Actually Wear</div>
+      <div class="trending-card-text">Fashion finds to elevate your look.</div>
+    </a>
+
+    <a href="#" class="trending-card">
+      <div class="trending-card-title">Glow Up Essentials</div>
+      <div class="trending-card-text">Beauty & wellness favorites for daily self-care.</div>
+    </a>
+
+    <a href="#" class="trending-card">
+      <div class="trending-card-title">Luxe Finds</div>
+      <div class="trending-card-text">Treat yourself (these make great gift ideas too).</div>
+    </a>
+
+    <a href="#" class="trending-card">
+      <div class="trending-card-title">Travel Must-Haves Worth Buying</div>
+      <div class="trending-card-text">Smart companions for adventures near or far.</div>
+    </a>
+
+  </div>
+</section>
 
     <section class="section">
       <h2>Shop by Category</h2>
